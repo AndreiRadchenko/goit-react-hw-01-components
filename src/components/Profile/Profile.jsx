@@ -1,4 +1,4 @@
-import ProfileCard from './Profile.styled';
+import css from './Profile.styled';
 
 const Profile = ({
   username,
@@ -8,15 +8,15 @@ const Profile = ({
   stats: { followers, views, likes },
 }) => {
   return (
-    <ProfileCard.Card>
+    <css.Card>
       <div class="description">
-        <ProfileCard.Avatar src={avatar} alt="User avatar" />
-        <ProfileCard.Name>{username}</ProfileCard.Name>
+        <css.Avatar src={avatar} alt="User avatar" />
+        <css.Name>{username}</css.Name>
         <p class="tag">@{tag}</p>
         <p class="location">{location}</p>
       </div>
 
-      <ProfileCard.Stats>
+      <css.Stats>
         <li>
           <span id="label">Followers</span>
           <span class="quantity">{followers}</span>
@@ -29,8 +29,8 @@ const Profile = ({
           <span id="label">Likes</span>
           <span class="quantity">{likes}</span>
         </li>
-      </ProfileCard.Stats>
-    </ProfileCard.Card>
+      </css.Stats>
+    </css.Card>
   );
 };
 

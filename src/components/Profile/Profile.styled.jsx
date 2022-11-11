@@ -42,11 +42,11 @@ const Stats = styled.ul`
   }
 `;
 
-const ProfileCard = {
+const css = {
   Card,
   Avatar,
   Name,
   Stats,
 };
 
-export default ProfileCard;
+export default css;
