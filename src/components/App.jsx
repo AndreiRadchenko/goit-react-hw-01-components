@@ -6,15 +6,15 @@ import data from 'components/Statistics/data.json';
 const App = () => {
   return (
     <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-        gap: '30px',
-      }}
+    // style={{
+    //   display: 'flex',
+    //   flexDirection: 'column',
+    //   justifyContent: 'center',
+    //   alignItems: 'center',
+    //   fontSize: 40,
+    //   color: '#010101',
+    //   gap: '30px',
+    // }}
     >
       {/* React homework template */}
       <Profile
@@ -24,7 +24,7 @@ const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      <Statistics title="Upload stats" stats={data} />
+      <Statistics title="File statistic" stats={data} />
       <Statistics stats={data} />
     </div>
   );

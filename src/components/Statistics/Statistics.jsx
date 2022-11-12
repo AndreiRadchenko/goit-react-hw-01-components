@@ -1,17 +1,18 @@
 import css from './Statistic.styled';
+import randomColor from '../../utils/rundomColor';
 
 const Statistics = ({ title = false, stats }) => {
   return (
     <css.Section>
-      <css.Card>
+      <css.Card size={stats.length}>
         {title && <css.Title>{title}</css.Title>}
 
         <css.Stats>
           {stats.map(e => (
-            <li key={e.id} class="item">
-              <span class="label">{e.label}</span>
-              <span class="percentage">{e.percentage}%</span>
-            </li>
+            <css.Item key={e.id} bgColor={randomColor()}>
+              <css.Label>{e.label}</css.Label>
+              <css.Persentage>{e.percentage}%</css.Persentage>
+            </css.Item>
           ))}
         </css.Stats>
       </css.Card>

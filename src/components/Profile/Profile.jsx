@@ -5,32 +5,30 @@ const Profile = ({
   tag,
   location,
   avatar = 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
-  stats: { followers, views, likes },
+  stats,
 }) => {
   return (
-    <css.Card>
-      <div class="description">
-        <css.Avatar src={avatar} alt="User avatar" />
-        <css.Name>{username}</css.Name>
-        <p class="tag">@{tag}</p>
-        <p class="location">{location}</p>
-      </div>
+    <css.Section>
+      <css.Card>
+        <div class="description">
+          <css.Avatar src={avatar} alt="User avatar" />
+          <css.Name>{username}</css.Name>
+          <p class="tag">@{tag}</p>
+          <p class="location">{location}</p>
+        </div>
 
-      <css.Stats>
-        <li>
-          <span id="label">Followers</span>
-          <span class="quantity">{followers}</span>
-        </li>
-        <li>
-          <span id="label">Views</span>
-          <span class="quantity">{views}</span>
-        </li>
-        <li>
-          <span id="label">Likes</span>
-          <span class="quantity">{likes}</span>
-        </li>
-      </css.Stats>
-    </css.Card>
+        <css.Stats>
+          {Object.entries(stats).map(item => {
+            return (
+              <css.Item>
+                <span id="label">{item[0]}</span>
+                <span class="quantity">{item[1]}</span>
+              </css.Item>
+            );
+          })}
+        </css.Stats>
+      </css.Card>
+    </css.Section>
   );
 };
 

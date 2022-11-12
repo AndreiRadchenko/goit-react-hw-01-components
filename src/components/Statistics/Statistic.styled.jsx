@@ -3,9 +3,12 @@ import styled from 'styled-components';
 const Section = styled.section`
   background-color: ${p => p.theme.colors.background};
   width: 100%;
+  padding: 30px 0;
+  text-align: center;
 `;
 
 const Card = styled.div`
+  display: inline-block;
   font-size: ${p => p.theme.fontSizes.m};
   background-color: ${p => p.theme.colors.background};
   padding-top: ${p => p.theme.space[5]}px;
@@ -20,25 +23,34 @@ const Title = styled.h2`
 `;
 
 const Stats = styled.ul`
-  @extend .list;
-  /* list-style-type: none; */
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-around;
   margin-top: ${p => p.theme.space[5]}px;
   background-color: ${p => p.theme.colors.secondary};
-  padding: ${p => p.theme.space[5]}px;
-  gap: ${p => p.theme.space[3]}px;
   color: ${p => p.theme.colors.textStats};
-  & > li {
-    display: flex;
-    flex-direction: column;
-    gap: ${p => p.theme.space[3]}px;
-    & > #label {
-      color: ${p => p.theme.colors.textAlt};
-    }
+`;
+
+const Item = styled.li`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: ${p => p.theme.space[6]}px;
+  height: ${p => p.theme.space[6]}px;
+  background-color: ${p => p.bgColor};
+  color: ${p => p.theme.colors.textAlt};
+  & + & {
+    border-left: 1px solid ${p => p.theme.colors.textStats};
   }
+`;
+
+const Label = styled.span`
+  font-size: ${p => p.theme.fontSizes.s};
+`;
+
+const Persentage = styled.span`
+  font-size: ${p => p.theme.fontSizes.m};
 `;
 
 const css = {
@@ -46,6 +58,9 @@ const css = {
   Card,
   Title,
   Stats,
+  Item,
+  Label,
+  Persentage,
 };
 
 export default css;
