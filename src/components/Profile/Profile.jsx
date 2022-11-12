@@ -10,19 +10,19 @@ const Profile = ({
   return (
     <css.Section>
       <css.Card>
-        <div class="description">
+        <div>
           <css.Avatar src={avatar} alt="User avatar" />
           <css.Name>{username}</css.Name>
-          <p class="tag">@{tag}</p>
-          <p class="location">{location}</p>
+          <p>@{tag}</p>
+          <p>{location}</p>
         </div>
 
         <css.Stats>
           {Object.entries(stats).map(item => {
             return (
               <css.Item key={item[0]}>
-                <span id="label">{item[0]}</span>
-                <span class="quantity">{item[1]}</span>
+                <span>{item[0]}</span>
+                <span>{item[1]}</span>
               </css.Item>
             );
           })}

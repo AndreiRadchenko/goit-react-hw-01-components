@@ -10,6 +10,9 @@ export const theme = {
     muted: '#f6f6f6',
     textStats: '#aaa',
     textAlt: '#eee',
+    tableHead: '#3399ff',
+    tableRowOdd: '#fdfdfd',
+    tableRowEven: '#dddddd',
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
