@@ -1,4 +1,6 @@
 import css from './Profile.styled';
+import PropTypes from 'prop-types';
+import { FaUsers, FaEye, FaThumbsUp } from 'react-icons/fa';
 
 const Profile = ({
   username,
@@ -18,18 +20,35 @@ const Profile = ({
         </div>
 
         <css.Stats>
-          {Object.entries(stats).map(item => {
-            return (
-              <css.Item key={item[0]}>
-                <span>{item[0]}</span>
-                <span>{item[1]}</span>
-              </css.Item>
-            );
-          })}
+          <css.Item>
+            <FaUsers />
+            <span>{stats.followers}</span>
+          </css.Item>
+          <css.Item>
+            {/* <GrView /> */}
+            <FaEye />
+            <span>{stats.views}</span>
+          </css.Item>
+          <css.Item>
+            <FaThumbsUp />
+            <span>{stats.likes}</span>
+          </css.Item>
         </css.Stats>
       </css.Card>
     </css.Section>
   );
+};
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string,
+  stats: PropTypes.shape({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }),
 };
 
 export default Profile;

@@ -7,7 +7,7 @@ const Section = styled.section`
 `;
 
 const Card = styled.div`
-  width: 280px;
+  width: 320px;
   font-size: ${p => p.theme.fontSizes.m};
   background-color: ${p => p.theme.colors.background};
   padding-top: ${p => p.theme.space[5]}px;
@@ -41,9 +41,10 @@ const Stats = styled.ul`
 
 const Item = styled.li`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: ${p => p.theme.space[6]}px;
+  justify-content: space-around;
+  align-items: center;
+  width: 80px;
+  padding-left: ${p => p.theme.space[4]}px;
   height: ${p => p.theme.space[6]}px;
   background-color: ${p => p.bgColor};
   color: ${p => p.theme.colors.textAlt};

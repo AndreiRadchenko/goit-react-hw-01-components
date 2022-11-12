@@ -1,5 +1,6 @@
 import css from './Statistic.styled';
 import randomColor from '../../utils/rundomColor';
+import PropTypes from 'prop-types';
 
 const Statistics = ({ title = false, stats }) => {
   return (
@@ -18,6 +19,18 @@ const Statistics = ({ title = false, stats }) => {
       </css.Card>
     </css.Section>
   );
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };
 
 export default Statistics;

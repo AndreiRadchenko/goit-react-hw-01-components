@@ -1,4 +1,5 @@
 import css from './FriendList.styled';
+import PropTypes from 'prop-types';
 
 const FriendList = ({ friends }) => {
   return (
@@ -14,6 +15,17 @@ const FriendList = ({ friends }) => {
       </css.List>
     </css.Section>
   );
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+      name: PropTypes.string.isRequired,
+      avatar: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 export default FriendList;
