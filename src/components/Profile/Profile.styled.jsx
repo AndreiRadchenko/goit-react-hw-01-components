@@ -1,11 +1,5 @@
 import styled from 'styled-components';
 
-const Section = styled.section`
-  background-color: ${p => p.theme.colors.muted};
-  width: 100%;
-  padding: 30px 0;
-`;
-
 const Card = styled.div`
   width: 320px;
   font-size: ${p => p.theme.fontSizes.m};
@@ -54,7 +48,6 @@ const Item = styled.li`
 `;
 
 const css = {
-  Section,
   Card,
   Avatar,
   Name,

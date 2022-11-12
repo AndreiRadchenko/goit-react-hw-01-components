@@ -1,6 +1,7 @@
 import css from './Profile.styled';
 import PropTypes from 'prop-types';
 import { FaUsers, FaEye, FaThumbsUp } from 'react-icons/fa';
+import Box from 'components/Box';
 
 const Profile = ({
   username,
@@ -10,11 +11,13 @@ const Profile = ({
   stats,
 }) => {
   return (
-    <css.Section>
+    <Box bg="muted" width="100%" py="30px" as="section">
       <css.Card>
         <div>
           <css.Avatar src={avatar} alt="User avatar" />
-          <css.Name>{username}</css.Name>
+          <Box fontSize="xl" lineHeight="heading" color="black" as="p" my={4}>
+            {username}
+          </Box>
           <p>@{tag}</p>
           <p>{location}</p>
         </div>
@@ -35,7 +38,7 @@ const Profile = ({
           </css.Item>
         </css.Stats>
       </css.Card>
-    </css.Section>
+    </Box>
   );
 };
 
