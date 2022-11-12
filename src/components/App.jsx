@@ -1,22 +1,13 @@
 import Profile from 'components/Profile/Profile';
 import Statistics from 'components/Statistics/Statistics';
+import FriendList from 'components/FriendList/FriendList';
 import user from 'components/Profile/user.json';
 import data from 'components/Statistics/data.json';
+import friends from 'components/FriendList/friends.json';
 
 const App = () => {
   return (
-    <div
-    // style={{
-    //   display: 'flex',
-    //   flexDirection: 'column',
-    //   justifyContent: 'center',
-    //   alignItems: 'center',
-    //   fontSize: 40,
-    //   color: '#010101',
-    //   gap: '30px',
-    // }}
-    >
-      {/* React homework template */}
+    <>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -26,7 +17,8 @@ const App = () => {
       />
       <Statistics title="File statistic" stats={data} />
       <Statistics stats={data} />
-    </div>
+      <FriendList friends={friends} />
+    </>
   );
 };
 

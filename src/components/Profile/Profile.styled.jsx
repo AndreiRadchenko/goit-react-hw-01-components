@@ -21,6 +21,7 @@ const Avatar = styled.img`
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  margin: 0 auto;
 `;
 
 const Name = styled.p`

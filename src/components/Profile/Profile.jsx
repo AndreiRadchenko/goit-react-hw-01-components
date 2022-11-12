@@ -20,7 +20,7 @@ const Profile = ({
         <css.Stats>
           {Object.entries(stats).map(item => {
             return (
-              <css.Item>
+              <css.Item key={item[0]}>
                 <span id="label">{item[0]}</span>
                 <span class="quantity">{item[1]}</span>
               </css.Item>
