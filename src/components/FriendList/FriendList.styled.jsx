@@ -1,11 +1,5 @@
 import styled from 'styled-components';
 
-const Section = styled.section`
-  background-color: ${p => p.theme.colors.muted};
-  width: 100%;
-  padding: 30px 0;
-`;
-
 const Status = styled.span`
   width: ${p => p.theme.space[4]}px;
   height: ${p => p.theme.space[4]}px;
@@ -49,7 +43,6 @@ const Card = styled.div`
 `;
 
 const css = {
-  Section,
   Card,
   Status,
   Avatar,

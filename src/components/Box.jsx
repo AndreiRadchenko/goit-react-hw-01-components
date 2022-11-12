@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {
+  typography,
   color,
   space,
   layout,
@@ -11,6 +12,7 @@ import {
 } from 'styled-system';
 
 const Box = styled('div')(
+  typography,
   color,
   space,
   layout,

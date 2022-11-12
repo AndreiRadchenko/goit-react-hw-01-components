@@ -1,12 +1,17 @@
 import css from './Statistic.styled';
 import randomColor from '../../utils/rundomColor';
 import PropTypes from 'prop-types';
+import Box from 'components/Box';
 
 const Statistics = ({ title = false, stats }) => {
   return (
-    <css.Section>
+    <Box bg="background" py={5} textAlign="center" width="100%" as="section">
       <css.Card size={stats.length}>
-        {title && <css.Title>{title}</css.Title>}
+        {title && (
+          <Box fontSize="l" color="black" as="h2">
+            {title}
+          </Box>
+        )}
 
         <css.Stats>
           {stats.map(e => (
@@ -17,7 +22,7 @@ const Statistics = ({ title = false, stats }) => {
           ))}
         </css.Stats>
       </css.Card>
-    </css.Section>
+    </Box>
   );
 };
 

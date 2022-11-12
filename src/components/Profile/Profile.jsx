@@ -11,11 +11,11 @@ const Profile = ({
   stats,
 }) => {
   return (
-    <Box bg="muted" width="100%" py="30px" as="section">
+    <Box bg="muted" width="100%" py={5} as="section">
       <css.Card>
         <div>
           <css.Avatar src={avatar} alt="User avatar" />
-          <Box fontSize="xl" lineHeight="heading" color="black" as="p" my={4}>
+          <Box fontSize="l" lineHeight="heading" color="black" as="p" my={4}>
             {username}
           </Box>
           <p>@{tag}</p>

@@ -1,12 +1,5 @@
 import styled from 'styled-components';
 
-const Section = styled.section`
-  background-color: ${p => p.theme.colors.background};
-  width: 100%;
-  padding: 30px 0;
-  text-align: center;
-`;
-
 const Table = styled.table`
   margin: 0 auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -40,7 +33,6 @@ const Td = styled.td`
 `;
 
 const css = {
-  Section,
   Table,
   Thead,
   Th,

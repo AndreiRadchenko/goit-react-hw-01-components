@@ -1,12 +1,5 @@
 import styled from 'styled-components';
 
-const Section = styled.section`
-  background-color: ${p => p.theme.colors.background};
-  width: 100%;
-  padding: 30px 0;
-  text-align: center;
-`;
-
 const Card = styled.div`
   display: inline-block;
   font-size: ${p => p.theme.fontSizes.m};
@@ -15,11 +8,6 @@ const Card = styled.div`
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: ${p => p.theme.colors.textStats};
-`;
-
-const Title = styled.h2`
-  font-size: ${p => p.theme.fontSizes.l};
-  color: ${p => p.theme.colors.black};
 `;
 
 const Stats = styled.ul`
@@ -54,9 +42,7 @@ const Persentage = styled.span`
 `;
 
 const css = {
-  Section,
   Card,
-  Title,
   Stats,
   Item,
   Label,

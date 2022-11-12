@@ -1,9 +1,10 @@
 import css from './FriendList.styled';
 import PropTypes from 'prop-types';
+import Box from 'components/Box';
 
 const FriendList = ({ friends }) => {
   return (
-    <css.Section>
+    <Box bg="muted" width="100%" py={5} as="section">
       <css.List>
         {friends.map(e => (
           <css.Card key={e.id}>
@@ -13,7 +14,7 @@ const FriendList = ({ friends }) => {
           </css.Card>
         ))}
       </css.List>
-    </css.Section>
+    </Box>
   );
 };
 

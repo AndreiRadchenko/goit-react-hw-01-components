@@ -1,9 +1,10 @@
 import css from './TransactionHistory.styled';
 import PropTypes from 'prop-types';
+import Box from 'components/Box';
 
 const TransactionHistory = ({ transactions }) => {
   return (
-    <css.Section>
+    <Box bg="background" py={5} textAlign="center" width="100%" as="section">
       <css.Table>
         <css.Thead>
           <css.Tr>
@@ -23,7 +24,7 @@ const TransactionHistory = ({ transactions }) => {
           ))}
         </tbody>
       </css.Table>
-    </css.Section>
+    </Box>
   );
 };
 
