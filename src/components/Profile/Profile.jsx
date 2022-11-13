@@ -8,7 +8,7 @@ const Profile = ({
   tag,
   location,
   avatar = 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png',
-  stats,
+  stats: { followers, views, likes },
 }) => {
   return (
     <Box bg="muted" width="100%" py={5} as="section">
@@ -25,16 +25,15 @@ const Profile = ({
         <css.Stats>
           <css.Item>
             <FaUsers />
-            <span>{stats.followers}</span>
+            <span>{followers}</span>
           </css.Item>
           <css.Item>
-            {/* <GrView /> */}
             <FaEye />
-            <span>{stats.views}</span>
+            <span>{views}</span>
           </css.Item>
           <css.Item>
             <FaThumbsUp />
-            <span>{stats.likes}</span>
+            <span>{likes}</span>
           </css.Item>
         </css.Stats>
       </css.Card>

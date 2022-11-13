@@ -23,7 +23,7 @@ const List = styled.ul`
   text-align: center;
 `;
 
-const Card = styled.div`
+const Card = styled.li`
   display: flex;
   justify-content: start;
   align-items: center;

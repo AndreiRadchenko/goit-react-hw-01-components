@@ -37,7 +37,7 @@ const Label = styled.span`
   font-size: ${p => p.theme.fontSizes.s};
 `;
 
-const Persentage = styled.span`
+const Percentage = styled.span`
   font-size: ${p => p.theme.fontSizes.m};
 `;
 
@@ -46,7 +46,7 @@ const css = {
   Stats,
   Item,
   Label,
-  Persentage,
+  Percentage,
 };
 
 export default css;

@@ -14,10 +14,10 @@ const Statistics = ({ title = false, stats }) => {
         )}
 
         <css.Stats>
-          {stats.map(e => (
-            <css.Item key={e.id} bgColor={randomColor()}>
-              <css.Label>{e.label}</css.Label>
-              <css.Persentage>{e.percentage}%</css.Persentage>
+          {stats.map(({ id, label, percentage }) => (
+            <css.Item key={id} bgColor={randomColor()}>
+              <css.Label>{label}</css.Label>
+              <css.Percentage>{percentage}%</css.Percentage>
             </css.Item>
           ))}
         </css.Stats>
